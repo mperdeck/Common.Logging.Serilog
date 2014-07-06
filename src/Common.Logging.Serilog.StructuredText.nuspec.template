@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Common.Logging.Serilog.StructuredText</id>
+    <version>__Version__</version>
+    <authors>mperdeck</authors>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>https://github.com/mperdeck/Common.Logging.Serilog.StructuredText</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Common Logging Adapter for Serilog. Unlike Common.Logging.Serilog, when you log strings with JSON objects, these will be deserialized and logged as structured objects.</description>
+    <language>en-US</language>
+    <tags>serilog common logging adapter</tags>
+    <dependencies>
+      <dependency id="Common.Logging" version="2.2.0" />
+      <dependency id="Common.Logging.Core" version="2.2.0" />
+      <dependency id="Serilog" version="1.3.3" />
+    </dependencies>
+  </metadata>
+  <files>
+	<file src="NuGet\content\app.config.transform" target="content\app.config.transform" />
+    <file src="NuGet\content\web.config.transform" target="content\web.config.transform" />  	
+  </files>
+</package>

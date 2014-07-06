@@ -38,7 +38,7 @@ var log = new LoggerConfiguration()
     .WriteTo.ColoredConsole()
     .CreateLogger();
 
-// set global instance of Serilog logger which Common.Logger.Serilog requires.
+// set global instance of Serilog logger which Common.Logger.Serilog.StructuredText requires.
 Log.Logger = log;
 ```
 
