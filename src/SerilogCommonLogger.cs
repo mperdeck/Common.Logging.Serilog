@@ -129,7 +129,7 @@ namespace Common.Logging.Serilog
                     }
                 }
 
-                this._logger.Write(logLevel, exception, "{message:l}", message);
+                this._logger.Write(logLevel, exception, "{@message:l}", message);
             }
             catch
             {

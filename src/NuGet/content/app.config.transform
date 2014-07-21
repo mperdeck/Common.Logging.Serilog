@@ -7,7 +7,7 @@
   </configSections>
   <common>
     <logging>
-      <factoryAdapter type="Common.Logging.Serilog.SerilogFactoryAdapter, Common.Logging.Serilog" />
+      <factoryAdapter type="Common.Logging.Serilog.SerilogFactoryAdapter, Common.Logging.Serilog.StructuredText" />
     </logging>
   </common>
 </configuration>
