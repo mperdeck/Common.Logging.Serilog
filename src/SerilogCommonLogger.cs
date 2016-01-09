@@ -150,11 +150,17 @@ namespace Common.Logging.Serilog
                     case LogLevel.All:
                         logEventLevel = LogEventLevel.Verbose;
                         break;
+                    case LogLevel.Trace:
+                        logEventLevel = LogEventLevel.Verbose;
+                        break;
                     case LogLevel.Info:
                         logEventLevel = LogEventLevel.Information;
                         break;
                     case LogLevel.Warn:
                         logEventLevel = LogEventLevel.Warning;
+                        break;
+                    default:
+                        logEventLevel = LogEventLevel.Fatal;
                         break;
                 }
             }
