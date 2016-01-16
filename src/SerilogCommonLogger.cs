@@ -143,26 +143,32 @@ namespace Common.Logging.Serilog
         private LogEventLevel ConvertLevel(LogLevel logLevel)
         {
             LogEventLevel logEventLevel;
-            if (!Enum.TryParse(logLevel.ToString(), true, out logEventLevel))
+            switch (logLevel)
             {
-                switch (logLevel)
-                {
-                    case LogLevel.All:
-                        logEventLevel = LogEventLevel.Verbose;
-                        break;
-                    case LogLevel.Trace:
-                        logEventLevel = LogEventLevel.Verbose;
-                        break;
-                    case LogLevel.Info:
-                        logEventLevel = LogEventLevel.Information;
-                        break;
-                    case LogLevel.Warn:
-                        logEventLevel = LogEventLevel.Warning;
-                        break;
-                    default:
-                        logEventLevel = LogEventLevel.Fatal;
-                        break;
-                }
+                case LogLevel.All:
+                    logEventLevel = LogEventLevel.Verbose;
+                    break;
+                case LogLevel.Trace:
+                    logEventLevel = LogEventLevel.Verbose;
+                    break;
+                case LogLevel.Debug:
+                    logEventLevel = LogEventLevel.Debug;
+                    break;
+                case LogLevel.Info:
+                    logEventLevel = LogEventLevel.Information;
+                    break;
+                case LogLevel.Warn:
+                    logEventLevel = LogEventLevel.Warning;
+                    break;
+                case LogLevel.Error:
+                    logEventLevel = LogEventLevel.Error;
+                    break;
+                case LogLevel.Fatal:
+                    logEventLevel = LogEventLevel.Fatal;
+                    break;
+                default:
+                    logEventLevel = LogEventLevel.Fatal;
+                    break;
             }
 
             return logEventLevel;
