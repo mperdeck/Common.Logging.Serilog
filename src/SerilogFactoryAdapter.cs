@@ -79,7 +79,7 @@ namespace Common.Logging.Serilog
         /// </returns>
         public ILog GetLogger(string name)
         {
-            return new SerilogCommonLogger(this.Logger.ForContext("name", name));
+            return new SerilogCommonLogger(this.Logger.ForContext("SourceContext", name));
         }
     }
 }
